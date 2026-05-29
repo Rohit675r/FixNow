@@ -1,0 +1,153 @@
+/* ================================
+   Login Page (Dark Theme)
+=================================== */
+.login-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+  background: radial-gradient(1000px 600px at 80% -10%, rgba(79,70,229,.20), transparent 60%),
+              radial-gradient(800px 500px at 0% 10%, rgba(34,211,238,.12), transparent 55%),
+              var(--bg);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Card */
+.login-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: var(--shadow);
+  color: var(--text);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Title */
+.login-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 28px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Input group */
+.form-group {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+  font-size: 16px;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--brand);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Floating label */
+.form-group label {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  color: var(--muted);
+  font-size: 15px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown):valid + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  padding: 0 4px;
+  background-color: var(--card);
+  color: var(--brand-2);
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow);
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(2,6,23,.45);
+}
+
+/* Signup redirect */
+.signup-redirect {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.signup-redirect a {
+  color: var(--brand-2);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.signup-redirect a:hover {
+  color: var(--brand);
+}
+
+/* Messages */
+.message {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 16px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.message.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+  border: 1px solid var(--error);
+}
+
+.message.success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
